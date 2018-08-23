@@ -1,11 +1,9 @@
-require 'formula'
-
 class S3Edit < Formula
-  homepage 'https://github.com/tsub/s3-edit'
-  version 'v0.0.7'
-
-  url 'https://github.com/tsub/s3-edit/releases/download/v0.0.7/s3-edit_v0.0.7_darwin_amd64.tar.gz'
-  sha256 '588c1c1fa11bf5692f75089e3d907b3a1d01db7a8898591932ace2c56cd632cb'
+  desc ""
+  homepage "https://github.com/tsub/s3-edit"
+  url "https://github.com/tsub/s3-edit/releases/download/v0.0.8/s3-edit_0.0.8_darwin_amd64.tar.gz"
+  version "0.0.8"
+  sha256 "417fc9f25cbf61ae434eaacde030d5a99d5a096d0ad9fd4c23b53374d2b4180b"
 
   def install
     bin.install 's3-edit'
