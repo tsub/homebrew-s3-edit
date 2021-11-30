@@ -5,12 +5,20 @@
 class S3Edit < Formula
   desc "Edit directly a file on Amazon S3 in CLI"
   homepage "https://github.com/tsub/s3-edit"
-  version "0.0.14"
+  version "0.0.15"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/tsub/s3-edit/releases/download/v0.0.15/s3-edit_0.0.15_darwin_arm64.tar.gz"
+      sha256 "8156dafa1ce7c0f76d48136cb932d479dc5220fe9a4f6b567ee369ed20a815f4"
+
+      def install
+        bin.install 's3-edit'
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/tsub/s3-edit/releases/download/v0.0.14/s3-edit_0.0.14_darwin_amd64.tar.gz"
-      sha256 "635ae03d349fa61b0fd2f5835e0f8cc25d9ad68a56eff29a7dfc39f4c9e9cbed"
+      url "https://github.com/tsub/s3-edit/releases/download/v0.0.15/s3-edit_0.0.15_darwin_amd64.tar.gz"
+      sha256 "a037eebd4abb2be50eb725dd5f0d64a7fa2e2e04bad2d8bd0fc058b0fe461171"
 
       def install
         bin.install 's3-edit'
@@ -20,16 +28,16 @@ class S3Edit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsub/s3-edit/releases/download/v0.0.14/s3-edit_0.0.14_linux_arm64.tar.gz"
-      sha256 "ebe1379ae7bb104bbe9eb639a4a16f6bd42bbfbe89a0c41905a87bd2c6840e72"
+      url "https://github.com/tsub/s3-edit/releases/download/v0.0.15/s3-edit_0.0.15_linux_arm64.tar.gz"
+      sha256 "79d168b6a0dcd2b8436e885241e02ec6d6092b93874df18d35e734c349f84b62"
 
       def install
         bin.install 's3-edit'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tsub/s3-edit/releases/download/v0.0.14/s3-edit_0.0.14_linux_amd64.tar.gz"
-      sha256 "426b845d1d717bb76dc4a4de816353039e76dfcbcdc478d15dacf8f41162c36d"
+      url "https://github.com/tsub/s3-edit/releases/download/v0.0.15/s3-edit_0.0.15_linux_amd64.tar.gz"
+      sha256 "64f3bb4a5b28aaf0d1dae9de20586c661fd479cad45422114231a3e1c7772beb"
 
       def install
         bin.install 's3-edit'
