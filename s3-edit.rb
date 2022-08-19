@@ -5,20 +5,20 @@
 class S3Edit < Formula
   desc "Edit directly a file on Amazon S3 in CLI"
   homepage "https://github.com/tsub/s3-edit"
-  version "0.0.15"
+  version "0.0.16"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/tsub/s3-edit/releases/download/v0.0.15/s3-edit_0.0.15_darwin_arm64.tar.gz"
-      sha256 "8156dafa1ce7c0f76d48136cb932d479dc5220fe9a4f6b567ee369ed20a815f4"
+      url "https://github.com/tsub/s3-edit/releases/download/v0.0.16/s3-edit_0.0.16_darwin_arm64.tar.gz"
+      sha256 "b1f7b5f4b27bfda774fc393021b17bbda0cac7ee229b84345d12dedce41c8ed6"
 
       def install
         bin.install 's3-edit'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tsub/s3-edit/releases/download/v0.0.15/s3-edit_0.0.15_darwin_amd64.tar.gz"
-      sha256 "a037eebd4abb2be50eb725dd5f0d64a7fa2e2e04bad2d8bd0fc058b0fe461171"
+      url "https://github.com/tsub/s3-edit/releases/download/v0.0.16/s3-edit_0.0.16_darwin_amd64.tar.gz"
+      sha256 "ef23e55400f2318d44563bd0a1ce99d41145e6912534b9ef8fd821e43e3fb16f"
 
       def install
         bin.install 's3-edit'
@@ -28,16 +28,16 @@ class S3Edit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tsub/s3-edit/releases/download/v0.0.15/s3-edit_0.0.15_linux_arm64.tar.gz"
-      sha256 "79d168b6a0dcd2b8436e885241e02ec6d6092b93874df18d35e734c349f84b62"
+      url "https://github.com/tsub/s3-edit/releases/download/v0.0.16/s3-edit_0.0.16_linux_arm64.tar.gz"
+      sha256 "2c5f122c32dc7277767da0869fbb8425179508228dfeeebd0b69037b0176be22"
 
       def install
         bin.install 's3-edit'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/tsub/s3-edit/releases/download/v0.0.15/s3-edit_0.0.15_linux_amd64.tar.gz"
-      sha256 "64f3bb4a5b28aaf0d1dae9de20586c661fd479cad45422114231a3e1c7772beb"
+      url "https://github.com/tsub/s3-edit/releases/download/v0.0.16/s3-edit_0.0.16_linux_amd64.tar.gz"
+      sha256 "f4615101d8d0cc59bda70783b0b6548141e4982123bc31258054c7323e8af3b2"
 
       def install
         bin.install 's3-edit'
